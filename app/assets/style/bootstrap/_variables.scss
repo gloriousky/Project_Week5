@@ -76,8 +76,8 @@ $dark:          $gray-800 !default;
 $theme-colors: () !default;
 $theme-colors: map-merge(
   (
-    "primary":    $primary,
-    "secondary":  $secondary,
+    "primary":    #EDF4EE,
+    "secondary":  #2A8356,
     "success":    $success,
     "info":       $info,
     "warning":    $warning,
@@ -142,7 +142,8 @@ $spacers: map-merge(
     2: ($spacer * .5),
     3: $spacer,
     4: ($spacer * 1.5),
-    5: ($spacer * 3)
+    5: ($spacer * 2),
+    6: ($spacer * 3),
   ),
   $spacers
 );

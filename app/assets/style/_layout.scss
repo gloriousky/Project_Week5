@@ -1,0 +1,34 @@
+.logo{
+    a{
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week5/logo-ANSWER.svg") no-repeat left;
+        background-size: contain;
+        text-indent: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+.user_img {
+    img{
+    width: 40px;
+    height: 40px;
+    }
+}
+.user_info{
+    p{
+        margin-bottom: 0;
+    }
+}
+.sidebar{
+    min-width:296px;
+    min-height: 80vh;
+    
+}
+.sidebar_item{
+    
+    a:hover{
+        border-left:4px solid #2A8356;
+        background-color: #ddf5e1;
+        color: rgba(25, 114, 17, 0.739);
+        transition:0.3s;
+    }
+}
