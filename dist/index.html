@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week5-homework</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css>" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/all.css"> 
+</head>
+<body>
+ <!--Sidebar-->
+    <div class="d-flex">
+        <div class="sidebar bg-primary d-flex flex-column justify-content-between pt-5 pb-5">
+            <div class="sidebar">
+                <h1 class="logo mb-4 px-5">
+                    <a href="index.html">answer</a>
+                </h1>
+                <ul class="sidebar">
+                    <li class="sidebar_item mb-4" data-aos="fade-right">
+                        <a href="#" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">insert_chart</span>Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar_item mb-4" data-aos="fade-right">
+                        <a href="#" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">forum</span>Question
+                        </a>
+                    </li>
+                    <li class="sidebar_item mb-4" data-aos="fade-right">
+                        <a href="index.html" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">assignment</span>Assignment
+                        </a>
+                    </li>
+                    <li class="sidebar_item mb-4" data-aos="fade-right">
+                        <a href="#" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">video_library</span>Course
+                        </a>
+                    </li>
+                    <li class="sidebar_item mb-4 sidebar_item_effect" data-aos="fade-right">
+                        <a href="#" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">supervisor_account</span>Admin
+                        </a>
+                    </li>
+                    <li class="sidebar_item mb-4" data-aos="fade-right">
+                        <a href="#" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">settings</span>Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar_user d-flex align-items-center px-5">
+              <div class="user_img mr-3">
+                <img class="rounded-circle"
+                  src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/andychen.jpeg?raw=true"
+                  alt="photo">
+              </div>
+              <div class="user_info">
+                <p class="font-weight-bold">Andy Chen</p>
+                <p class="text-sm text-black-50">andy0401@mail.com</p>
+            </div>
+        </div>
+    </div>
+        
+           <!--Admin-->
+       <div class="container p-5">
+        <div class="d-flex flex-column justify-content-between">
+            <div class="admin">
+                <div class="d-flex justify-content-between mb-6">
+                    <div class="d-flex align-items-center">
+                        <h2 class="mr-6">Admin</h2>
+                        <a href="" class="d-flex font-weight-bold" data-toggle="modal" data-target="#NewAdmin">
+                            <span class="material-icons text-secondary mr-2">add</span>Add New Admin
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <a href="#">
+                            <span class="material-icons mr-4">search</span></a>
+                        <a href="#">
+                            <span class="material-icons">notifications_active</span></a>
+                    </div>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="border-top-0 border-dark">ID
+                                <span class="material-icons text-secondary align-bottom">arrow_downward</span>
+                            </th>
+                            <th class="border-top-0 border-dark">Name</th>
+                            <th class="border-top-0 border-dark">Email</th>
+                            <th class="border-top-0 border-dark">Verified</th>
+                            <th class="border-top-0 border-dark"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">#1</th>
+                        <td>Emir Wicks</td>
+                            <td>emir.wicks@mail.com</td>
+                            <td>yes</td>
+                            <td class="text-right d-flex justify-content-end" >
+                                <a href="" data-toggle="modal" data-target="#member" class="pointer"><span class="material-icons mr-4">visibility</span></a>
+                                <a href=""><span class="material-icons">create</span></a>                                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#2</th>
+                            <td>Zaina Goldsmith</td>
+                            <td>zaina.goldsmith@mail.com</td>
+                            <td>yes</td>
+                            <td class="text-right d-flex justify-content-end">
+                                <a href="" data-toggle="modal" data-target="#member" class="pointer"><span class="material-icons mr-4">visibility</span></a>
+                                <a href=""><span class="material-icons">create</span></a>                                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#3</th>
+                            <td>Mahima Lopez</td>
+                            <td>Mahima.Lopez@mail.com</td>
+                            <td>yes</td>
+                            <td class="text-right d-flex justify-content-end">
+                                <a href="" data-toggle="modal" data-target="#member" class="pointer"><span class="material-icons mr-4">visibility</span></a>
+                                <a href=""><span class="material-icons">create</span></a>                                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#4</th>
+                            <td>Pharrell Murray</td>
+                            <td>Pharrell.Murray@mail.com</td>
+                            <td>yes</td>
+                            <td class="text-right d-flex justify-content-end">
+                                <a href="" data-toggle="modal" data-target="#member" class="pointer"><span class="material-icons mr-4">visibility</span></a>
+                                <a href=""><span class="material-icons">create</span></a>                                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#5</th>
+                            <td>Annika Mcbride</td>
+                            <td>Annika Mcbride@mail.com</td>
+                            <td>yes</td>
+                            <td class="text-right d-flex justify-content-end" justify-content-end>
+                                <a href="" data-toggle="modal" data-target="#member" class="pointer"><span class="material-icons mr-4">visibility</span></a>
+                                <a href=""><span class="material-icons">create</span></a>                                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#6</th>
+                            <td>Fatimah Clark</td>
+                            <td>Fatimah Clark@mail.com</td>
+                            <td>yes</td>
+                            <td class="text-right d-flex justify-content-end">
+                                <a href="" data-toggle="modal" data-target="#member" class="pointer"><span class="material-icons mr-4">visibility</span></a>
+                                <a href=""><span class="material-icons">create</span></a>                                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#7</th>
+                            <td>Klaudia Rhodes</td>
+                            <td>Klaudia Rhodes@mail.com</td>
+                            <td>yes</td>
+                            <td class="text-right d-flex justify-content-end">
+                                <a href="" data-toggle="modal" data-target="#member" class="pointer"><span class="material-icons mr-4">visibility</span></a>
+                                <a href=""><span class="material-icons">create</span></a>                                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#8</th>
+                            <td>Tillie Lucero</td>
+                            <td>Tillie Lucero@mail.com</td>
+                            <td>yes</td>
+                            <td class="text-right d-flex justify-content-end">
+                                <a href="" data-toggle="modal" data-target="#member" class="pointer"><span class="material-icons mr-4">visibility</span></a>
+                                <a href=""><span class="material-icons">create</span></a>                                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#9</th>
+                            <td>Sabrina Stephenson</td>
+                            <td>Sabrina Stephenson@mail.com</td>
+                            <td>yes</td>
+                            <td class="text-right d-flex justify-content-end">
+                                <a href="" data-toggle="modal" data-target="#member" class="pointer"><span class="material-icons mr-4">visibility</span></a>
+                                <a href=""><span class="material-icons">create</span></a>                                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#10</th>
+                            <td>Annie Smith</td>
+                            <td>Annie Smith@mail.com</td>
+                            <td>yes</td>
+                            <td class="text-right d-flex justify-content-end">
+                                <a href="" data-toggle="modal" data-target="#member" class="pointer"><span class="material-icons mr-4">visibility</span></a>
+                                <a href=""><span class="material-icons">create</span></a>                                    
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav>
+                <ul class="d-flex justify-content-end page-list">
+                    <li class="page-item">
+                        <a href="#" class="page-link p-gap">
+                            <span class="material-icons">chevron_left</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">
+                            1
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">
+                            2
+                        </a>
+                    </li>
+                            <li class="page-item">
+                    <a href="#" class="page-link">
+                            3
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">
+                            <span class="material-icons">chevron_right</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+        <!--Modal-->
+<div class="modal fade" id="NewAdmin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content p-5">
+        <div class="modal-header">
+          <h5 class="modal-title">New Admin</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="post">
+              <div class="border-bottom mb-4">
+                <h5 class="mb-3">Account</h5>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Email</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="xxx@mail.com">
+                  </div>  
+                </form>
+              </div>
+              <div class="border-bottom mb-4">
+                  <h5 class="mb-3">Verification</h5>
+                  <div class="d-flex mb-4">
+                      <span class="material-icons mr-3 text-danger">warning</span>
+                      <p class="font-weight-bold">Unverified</p>
+                  </div>
+                  <a href="" class="text-secondary border text-center py-3 font-weight-bold">Send Verification Mail</a>
+              </div>
+              <div class="border-bottom mb-4">
+                  <h5 class="mb-3">Access Level</h5>
+                  <select name="level" id="level" class="w-100 p-3 mb-5 text-black-50">
+                      <option value="-Choose access level-">-Choose access level-</option>
+                      <option value="lv1">lv1</option>
+                      <option value="lv2">lv2</option>
+                      <option value="lv3">lv3</option>
+                      <option value="lv4">lv4</option>
+                  </select>
+              </div>
+              <div class="mb-4">
+                  <h5 class="mb-3">Custom Access</h5>
+                  <div class="form-check mb-3">
+                      <input type="checkbox" class="form-check-input" value="Lecture" id="Lecture" neme="Lecture">
+                      <label for="Lecture" class="form-check-label">
+                        Lecture
+                      </label>
+                    </div>
+                  <div class="form-check mb-3">
+                      <input type="checkbox" class="form-check-input" value="" id="Coupon" neme="Coupon">
+                      <label for="Coupon" class="form-check-label">
+                        Coupon
+                      </label>
+                    </div>
+                  <div class="form-check mb-3">
+                      <input type="checkbox" class="form-check-input" value="" id="Message" neme="Message">
+                      <label for="Message" class="form-check-label">
+                        Message
+                      </label>
+                    </div>
+                  <div class="form-check mb-3">
+                      <input type="checkbox" class="form-check-input" value="" id="Setting" neme="Setting">
+                      <label for="Setting" class="form-check-label">
+                        Setting
+                      </label>
+                    </div>
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" value="" id="taskmenu" neme="taskmenu">
+                      <label for="taskmenu" class="form-check-label">
+                        task menu
+                      </label>
+                    </div>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer px-3">
+          <button type="button" class="btn btn-primary font-weight-bold px-5 mr-3" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-secondary font-weight-bold px-5" data-dism>Add</button>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>    
+</body>
+</html>
+
