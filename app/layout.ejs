@@ -8,69 +8,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--header-->
-    <header class="header">
-        <nav>
-            <a href="#"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/logo.png?raw=true" alt=""></a>
-            <ul class="fs-20 lh-30">
-                <li class="ml-64"><a href="#">常見問題</a></li>
-                <li class="ml-64"><a href="#">部落格</a></li>
-                <li class="ml-64"><a href="#">門市據點</a></li>
-                <li class="ml-64"><a href="#">系列鏡框</a></li>
-            </ul>
-        </nav>
-    </header>
-    <%- contents %>
-    <!--footer-->
-    <footer>
-        <div class="container">
-            <div class="footercontent">
-                <div class="footernav">
-                    <ul class="footer_title">
-                        <li class="mr-48  mt-48 fs-24"><a href="#">首頁</a></li>
-                        <li class="mr-48  mt-48 fs-24"><a href="#">系列鏡框</a></li>
-                        <li class="mr-48  mt-48 fs-24"><a href="#">門市據點</a></li>
-                        <li class="mr-48  mt-48 fs-24"><a href="#">部落格</a></li>
-                        <li class="mr-48  mt-48 fs-24"><a href="#">常見問題</a></li>
-                    </ul>
-                    <ul class="social">
-                        <li class="social_item mt-48 mr-32"> <a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-fb.svg" alt=""></a></li>
-                        <li class="social_item mt-48 mr-32"> <a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-ig.svg" alt=""></a></li>
-                        <li class="social_item mt-48 "> <a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-line.svg" alt=""></a></li>
-                    </ul>
-                </div>    
-                    <ul class="unfo">
-                        <li class="info_item">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week3/icon-phone.svg" alt="">
-                            <h3>0800-000-000</h3>
-                        </li>
-                        <li class="info_item">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week3/icon-mail.svg" alt="">
-                            <h3>glasses@business.com</h3>
-                        </li>
-                    </ul>
-                    <div class="footer_sub">
-                        <div class="copyright_nav">                           
-                            <div class="copyright_title">
-                                <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/logo.png?raw=true" alt="">
-                                <p>Copyright © 2020 Glasses.All rights reserved.</p>
-                            </div>
-                            <div class="copyright_title">
-                                    <ul class="claus">
-                                        <li class="clause_item mr-62">隱私權政策</li>
-                                        <li class="clause_item">服務條款</li>
-                                    </ul>
-                            </div>                        
-                        </div>
-                        <div class="footer-logo_sm">
-                            <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/logo.png?raw=true" alt="">
-                        </div>
-                        
-                    </div>
-                
+ <!--Sidebar-->
+    <div class="d-flex">
+        <div class="sidebar bg-primary d-flex flex-column justify-content-between pt-5 pb-5">
+            <div class="sidebar">
+                <h1 class="logo mb-4 px-5">
+                    <a href="index.html">answer</a>
+                </h1>
+                <ul class="sidebar">
+                    <li class="sidebar_item mb-4" data-aos="fade-right">
+                        <a href="#" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">insert_chart</span>Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar_item mb-4" data-aos="fade-right">
+                        <a href="#" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">forum</span>Question
+                        </a>
+                    </li>
+                    <li class="sidebar_item mb-4" data-aos="fade-right">
+                        <a href="index.html" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">assignment</span>Assignment
+                        </a>
+                    </li>
+                    <li class="sidebar_item mb-4" data-aos="fade-right">
+                        <a href="#" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">video_library</span>Course
+                        </a>
+                    </li>
+                    <li class="sidebar_item mb-4 sidebar_item_effect" data-aos="fade-right">
+                        <a href="#" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">supervisor_account</span>Admin
+                        </a>
+                    </li>
+                    <li class="sidebar_item mb-4" data-aos="fade-right">
+                        <a href="#" class="font-weight-bold py-1 px-5">
+                            <span class="material-icons align-bottom mr-3">settings</span>Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar_user d-flex align-items-center px-5">
+              <div class="user_img mr-3">
+                <img class="rounded-circle"
+                  src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/andychen.jpeg?raw=true"
+                  alt="photo">
+              </div>
+              <div class="user_info">
+                <p class="font-weight-bold">Andy Chen</p>
+                <p class="text-sm text-black-50">andy0401@mail.com</p>
             </div>
         </div>
-    </footer>
+    </div>
+    <%- contents %>
+
 </body>
 </html>
 
