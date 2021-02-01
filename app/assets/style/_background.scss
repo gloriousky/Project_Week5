@@ -1,0 +1,15 @@
+.bg{
+    background-repeat: no-repeat;
+    background-position: center center;   
+}
+.bg-texthide{
+    text-indent:101%; 
+    overflow:hidden;
+    white-space:nowrap;
+}
+.bg-cover{
+    background-size: cover;
+}
+.bg-banner{
+    background-image: url(../images/banner.jpg);    
+}

@@ -12,7 +12,6 @@
 //   console.log(dataset);
 // }
 
-
 fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=CWB-E07F42AC-0591-4435-BE58-C3A36CC97440&locationName=%E5%AE%9C%E8%98%AD%E7%B8%A3,%E8%8A%B1%E8%93%AE%E7%B8%A3,%E8%87%BA%E6%9D%B1%E7%B8%A3,%E8%87%BA%E5%8C%97%E5%B8%82,%E6%96%B0%E5%8C%97%E5%B8%82,%E6%A1%83%E5%9C%92%E5%B8%82,%E8%87%BA%E4%B8%AD%E5%B8%82,%E8%87%BA%E5%8D%97%E5%B8%82,%E9%AB%98%E9%9B%84%E5%B8%82,%E5%9F%BA%E9%9A%86%E5%B8%82,%E6%96%B0%E7%AB%B9%E5%B8%82,%E8%8B%97%E6%A0%97%E7%B8%A3,%E5%BD%B0%E5%8C%96%E7%B8%A3,%E5%8D%97%E6%8A%95%E7%B8%A3,%E9%9B%B2%E6%9E%97%E7%B8%A3,%E5%98%89%E7%BE%A9%E7%B8%A3,%E5%98%89%E7%BE%A9%E5%B8%82,%E5%B1%8F%E6%9D%B1%E7%B8%A3&elementName=')
 .then(function (response) {
     return response.json();
@@ -30,37 +29,36 @@ fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorizati
         var POP = element.weatherElement[0].time[0].elementValue[0].value
         var MinT = element.weatherElement[8].time[0].elementValue[0].value
         var MaxT = element.weatherElement[12].time[0].elementValue[0].value
+        var UV = element.weatherElement[9].time[0].elementValue[0].value
+        var UVI = element.weatherElement[9].time[0].elementValue[1].value
 
         var img_src
-        var Suggest
         if (POP == 0) {
             img_src = "https://image.flaticon.com/icons/svg/578/578153.svg"
-            Suggest = '可以出去玩'
         } else if (POP < 25) {
             img_src = "https://image.flaticon.com/icons/svg/578/578116.svg"
-            Suggest = '建議準備雨具，以備不時之需'
 
         } else if (POP < 50) {
             img_src = "https://image.flaticon.com/icons/svg/578/578118.svg"
-            Suggest = '建議要攜帶雨具'
         } else {
             img_src = "https://image.flaticon.com/icons/svg/578/578132.svg"
-            Suggest = '記得攜帶雨具'
         }
 
-        var Card = document.querySelector(".container")
+        var Card = document.querySelector(".row")
         Card.innerHTML += `
-        <div class="card">
+        <div class="card col-sm-3 col-md-2">
             <img src="${img_src}" alt="">
-            <div class="card-block">
-                <h1>${Name}</h1>
+            <div class="card">
+                <h1 class="font-weight-bold">${Name}</h1>
                 <p>天氣現象：</p>
                 <p>${WX}</p>
-                <p>${MinT}&#8451 ~ ${MaxT}&#8451</p>
+                <p>溫度：${MinT}&#8451 ~ ${MaxT}&#8451</p>
                 <p>降雨機率：${POP}%</p>
-                <p>${Suggest}</P>
+                <p>紫外線指數：${UV} (${UVI})</p>
             </div>
         </div>
         `
     });
 });
+
+

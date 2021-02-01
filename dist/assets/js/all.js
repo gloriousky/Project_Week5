@@ -25,25 +25,22 @@ fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorizati
     var POP = element.weatherElement[0].time[0].elementValue[0].value;
     var MinT = element.weatherElement[8].time[0].elementValue[0].value;
     var MaxT = element.weatherElement[12].time[0].elementValue[0].value;
+    var UV = element.weatherElement[9].time[0].elementValue[0].value;
+    var UVI = element.weatherElement[9].time[0].elementValue[1].value;
     var img_src;
-    var Suggest;
 
     if (POP == 0) {
       img_src = "https://image.flaticon.com/icons/svg/578/578153.svg";
-      Suggest = '可以出去玩';
     } else if (POP < 25) {
       img_src = "https://image.flaticon.com/icons/svg/578/578116.svg";
-      Suggest = '建議準備雨具，以備不時之需';
     } else if (POP < 50) {
       img_src = "https://image.flaticon.com/icons/svg/578/578118.svg";
-      Suggest = '建議要攜帶雨具';
     } else {
       img_src = "https://image.flaticon.com/icons/svg/578/578132.svg";
-      Suggest = '記得攜帶雨具';
     }
 
-    var Card = document.querySelector(".container");
-    Card.innerHTML += "\n        <div class=\"card\">\n            <img src=\"".concat(img_src, "\" alt=\"\">\n            <div class=\"card-block\">\n                <h1>").concat(Name, "</h1>\n                <p>\u5929\u6C23\u73FE\u8C61\uFF1A</p>\n                <p>").concat(WX, "</p>\n                <p>").concat(MinT, "&#8451 ~ ").concat(MaxT, "&#8451</p>\n                <p>\u964D\u96E8\u6A5F\u7387\uFF1A").concat(POP, "%</p>\n                <p>").concat(Suggest, "</P>\n            </div>\n        </div>\n        ");
+    var Card = document.querySelector(".row");
+    Card.innerHTML += "\n        <div class=\"card col-sm-3 col-md-2\">\n            <img src=\"".concat(img_src, "\" alt=\"\">\n            <div class=\"card\">\n                <h1 class=\"font-weight-bold\">").concat(Name, "</h1>\n                <p>\u5929\u6C23\u73FE\u8C61\uFF1A</p>\n                <p>").concat(WX, "</p>\n                <p>\u6EAB\u5EA6\uFF1A").concat(MinT, "&#8451 ~ ").concat(MaxT, "&#8451</p>\n                <p>\u964D\u96E8\u6A5F\u7387\uFF1A").concat(POP, "%</p>\n                <p>\u7D2B\u5916\u7DDA\u6307\u6578\uFF1A").concat(UV, " (").concat(UVI, ")</p>\n            </div>\n        </div>\n        ");
   });
 });
 //# sourceMappingURL=all.js.map
