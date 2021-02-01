@@ -6,6 +6,11 @@ img {
       text-decoration: none !important;
       display: block;
     color: $black;
+    :hover{
+      position: relative;
+      top:1px;
+      left:1px;
+    }
   }
 html {
     font-size: $font-size-base;
