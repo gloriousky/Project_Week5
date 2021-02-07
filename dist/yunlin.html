@@ -10,9 +10,9 @@
 </head>
 <body>
     <!-- Header -->
-    <div class="container mb-3">
-        <h1 class="text-secondary text-center font-weight-bold">台灣各縣市鄉鎮天氣預報</h1>
-        <a class="h4 text-secondary font-weight-bold mb-2 hvr-push" href="index.html">返回首頁</a>
+    <div class="container-fluid bg-third mb-3">
+        <h1 class="text-primary text-center font-weight-bold pt-2">台灣各縣市鄉鎮天氣預報</h1>
+        <a class="h4 text-primary font-weight-bold mb-2 hvr-push" href="index.html">返回首頁</a>
         <div class="dropright">
             <button class="btn btn-lg btn-success dropdown-toggle hvr-sweep-to-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               各縣市鄉鎮預報
@@ -43,9 +43,8 @@
               <a class="dropdown-item" href="taitung.html">台東縣</a>
             </div>
           </div>
-    </div>
-
-    <div class="container">
+          
+          <div class="container">
     <h2 class="text-primary text-center font-weight-bold">雲林縣</h2>
     <div class="row">
 
@@ -85,7 +84,7 @@
 
         var Card = document.querySelector(".row")
         Card.innerHTML += `
-        <div class="card bg-light col-sm-3 col-md-2 mb-3">
+        <div class="card bg-fourth col-sm-3 col-md-2 mb-3">
             <img src="${img_src}" alt="">
             <div>
                 <h1 class="font-weight-bold">${Name}</h1>
@@ -101,6 +100,8 @@
 });
 
 </script>
+        
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
