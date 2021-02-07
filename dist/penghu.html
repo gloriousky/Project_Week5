@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="assets/style/all.css"> 
 </head>
 <body>
-    <!-- Header -->
-    <div class="container-fluid bg-third mb-3">
-        <h1 class="text-primary text-center font-weight-bold pt-2">台灣各縣市鄉鎮天氣預報</h1>
-        <a class="h4 text-primary font-weight-bold mb-2 hvr-push" href="index.html">返回首頁</a>
-        <div class="dropright">
-            <button class="btn btn-lg btn-success dropdown-toggle hvr-sweep-to-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <!-- Header -->
+<div class="container-fluid bg-third mb-3">
+  <h1 class="text-primary text-center font-weight-bold pt-2">台灣各縣市鄉鎮天氣預報    
+  </h1>
+
+  <!--Admin-->    
+  <div class="container p-5">
+    <a class="h4 text-primary font-weight-bold mb-2 hvr-push" href="index.html">返回首頁</a>
+      <div class="dropright">
+            <button class="btn btn-lg btn-success dropdown-toggle hvr-sweep-to-right my-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               各縣市鄉鎮預報
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -42,16 +46,10 @@
               <a class="dropdown-item" href="hualien.html">花蓮縣</a>
               <a class="dropdown-item" href="taitung.html">台東縣</a>
             </div>
-          </div>
-          
-          
+      </div>
+      <div class="row">
 
-
-                 <!--Admin-->    
-<div class="container p-5">
-  <div class="row">
-
-  </div>
+      </div>
 </div>
 <script>
   fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-047?Authorization=CWB-E07F42AC-0591-4435-BE58-C3A36CC97440')
