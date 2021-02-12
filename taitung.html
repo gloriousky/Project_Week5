@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="assets/style/all.css"> 
 </head>
 <body>
-    <!-- Header -->
-    <div class="container mb-3">
-        <h1 class="text-secondary text-center font-weight-bold">台灣各縣市鄉鎮天氣預報</h1>
-        <a class="h4 text-secondary font-weight-bold mb-2 hvr-push" href="index.html">返回首頁</a>
-        <div class="dropright">
-            <button class="btn btn-lg btn-success dropdown-toggle hvr-sweep-to-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <!-- Header -->
+<div class="container-fluid bg-third mb-3">
+  <h1 class="text-primary text-center font-weight-bold pt-2">台灣各縣市鄉鎮天氣預報    
+  </h1>
+
+  <!--Admin-->    
+  <div class="container p-5">
+    <a class="h4 text-primary font-weight-bold mb-2 hvr-push" href="index.html">返回首頁</a>
+      <div class="dropright">
+            <button class="btn btn-lg btn-success dropdown-toggle hvr-sweep-to-right my-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               各縣市鄉鎮預報
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -42,65 +46,64 @@
               <a class="dropdown-item" href="hualien.html">花蓮縣</a>
               <a class="dropdown-item" href="taitung.html">台東縣</a>
             </div>
-          </div>
-    </div>
+      </div>
+      <div class="row">
 
-    <div class="container">
-    <h2 class="text-primary text-center font-weight-bold">台東市</h2>
-    <div class="row">
-
-    </div>
+      </div>
 </div>
 <script>
-    fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-039?Authorization=CWB-E07F42AC-0591-4435-BE58-C3A36CC97440')
+  fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-039?Authorization=CWB-E07F42AC-0591-4435-BE58-C3A36CC97440')
 .then(function (response) {
-    return response.json();
+  return response.json();
 })
+
 .then(function (weatherData) {
-    console.log(weatherData);
+  console.log(weatherData);
 
-    var Location = weatherData.records.locations[0].location
-    console.log(Location);
+  var Location = weatherData.records.locations[0].location
+  console.log(Location);
 
-    Location.forEach(element => {
-        var Name = element.locationName
-        var WX = element.weatherElement[6].time[0].elementValue[0].value
-        var POP = element.weatherElement[0].time[0].elementValue[0].value
-        var MinT = element.weatherElement[8].time[0].elementValue[0].value
-        var MaxT = element.weatherElement[12].time[0].elementValue[0].value
-        var UV = element.weatherElement[9].time[0].elementValue[0].value
-        var UVI = element.weatherElement[9].time[0].elementValue[1].value
+  Location.forEach(element => {
+      var Name = element.locationName
+      var WX = element.weatherElement[6].time[0].elementValue[0].value
+      var POP = element.weatherElement[0].time[0].elementValue[0].value
+      var MinT = element.weatherElement[8].time[0].elementValue[0].value
+      var MaxT = element.weatherElement[12].time[0].elementValue[0].value
+      var UV = element.weatherElement[9].time[0].elementValue[0].value
+      var UVI = element.weatherElement[9].time[0].elementValue[1].value
 
-        var img_src
-        if (POP == 0) {
-            img_src = "https://image.flaticon.com/icons/svg/578/578153.svg"
-        } else if (POP < 25) {
-            img_src = "https://image.flaticon.com/icons/svg/578/578116.svg"
+      var img_src
+      if (POP == 0) {
+          img_src = "https://image.flaticon.com/icons/svg/578/578153.svg"
+      } else if (POP < 25) {
+          img_src = "https://image.flaticon.com/icons/svg/578/578116.svg"
 
-        } else if (POP < 50) {
-            img_src = "https://image.flaticon.com/icons/svg/578/578118.svg"
-        } else {
-            img_src = "https://image.flaticon.com/icons/svg/578/578132.svg"
-        }
+      } else if (POP < 50) {
+          img_src = "https://image.flaticon.com/icons/svg/578/578118.svg"
+      } else {
+          img_src = "https://image.flaticon.com/icons/svg/578/578132.svg"
+      }
 
-        var Card = document.querySelector(".row")
-        Card.innerHTML += `
-        <div class="card bg-light col-sm-3 col-md-2 mb-3">
-            <img src="${img_src}" alt="">
-            <div>
-                <h1 class="font-weight-bold">${Name}</h1>
-                <p>天氣現象：</p>
-                <p>${WX}</p>
-                <p>溫度：${MinT}&#8451 ~ ${MaxT}&#8451</p>
-                <p>降雨機率：${POP}%</p>
-                <p>紫外線指數：${UV} (${UVI})</p>
-            </div>
-        </div>
-        `
-    });
+      var Card = document.querySelector(".row")
+      Card.innerHTML += `
+      <div class="card bg-fourth col-sm-3 col-md-2 mb-3">
+          <img src="${img_src}" alt="">
+          <div>
+              <h1 class="font-weight-bold">${Name}</h1>
+              <p>天氣現象：</p>
+              <p>${WX}</p>
+              <p>溫度：${MinT}&#8451 ~ ${MaxT}&#8451</p>
+              <p>降雨機率：${POP}%</p>
+              <p>紫外線指數：${UV} (${UVI})</p>
+          </div>
+      </div>
+      `
+  });
 });
 
 </script>
+        
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
