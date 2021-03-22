@@ -1,91 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台灣各縣市鄉鎮天氣預報</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style/all.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台灣各縣市鄉鎮天氣預報</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/all.css">
 </head>
+
 <body>
   <!-- Header -->
-<div class="container-fluid bg-third mb-3">
-  <h1 class="text-primary text-center font-weight-bold pt-3">台灣各縣市鄉鎮天氣預報    
-  </h1>
+  <div class="container-fluid bg-third mb-3">
+    <h1 class="text-primary text-center font-weight-bold pt-3">台灣各縣市鄉鎮天氣預報
+    </h1>
 
-  <!--Admin-->    
-  <div class="container p-5">
-    <a class="h4 text-primary font-weight-bold mb-2 hvr-push" href="index.html">返回首頁</a>
+    <!--Admin-->
+    <div class="container p-5">
+      <a class="h4 text-primary font-weight-bold mb-2 hvr-push" href="index.html">返回首頁</a>
       <div class="dropright">
-            <button class="btn btn-lg btn-success dropdown-toggle hvr-sweep-to-right my-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              各縣市鄉鎮預報
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <span>---------北部-----------</span>
-              <a class="dropdown-item" href="taipei.html">台北市</a>
-              <a class="dropdown-item" href="hsinpei.html">新北市</a>
-              <a class="dropdown-item" href="keelung.html">基隆市</a>
-              <a class="dropdown-item" href="taoyuan.html">桃園市</a>
-              <a class="dropdown-item" href="hsinchu.html">新竹市</a>
-              <a class="dropdown-item" href="hsinchu.html">新竹縣</a>
-              <a class="dropdown-item" href="ilan.html">宜蘭縣</a>
-              <span>----------中部-----------</span>
-              <a class="dropdown-item" href="miaoli.html">苗栗縣</a>
-              <a class="dropdown-item" href="taichung.html">台中市</a>
-              <a class="dropdown-item" href="chunghwa.html">彰化縣</a>
-              <a class="dropdown-item" href="nantou.html">南投縣</a>
-              <a class="dropdown-item" href="yunlin.html">雲林縣</a>
-              <span>----------南部-----------</span>
-              <a class="dropdown-item" href="chiayi.html">嘉義縣</a>
-              <a class="dropdown-item" href="tainan.html">台南市</a>
-              <a class="dropdown-item" href="kaohsiung.html">高雄市</a>
-              <a class="dropdown-item" href="pingtung.html">屏東縣</a>
-              <a class="dropdown-item" href="penghu.html">澎湖縣</a>
-              <span>----------東部-----------</span>
-              <a class="dropdown-item" href="hualien.html">花蓮縣</a>
-              <a class="dropdown-item" href="taitung.html">台東縣</a>
-            </div>
+        <button class="btn btn-lg btn-success dropdown-toggle hvr-sweep-to-right my-3" type="button"
+          id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          各縣市鄉鎮預報
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <span>---------北部-----------</span>
+          <a class="dropdown-item" href="taipei.html">台北市</a>
+          <a class="dropdown-item" href="hsinpei.html">新北市</a>
+          <a class="dropdown-item" href="keelung.html">基隆市</a>
+          <a class="dropdown-item" href="taoyuan.html">桃園市</a>
+          <a class="dropdown-item" href="hsinchu.html">新竹市</a>
+          <a class="dropdown-item" href="hsinchu.html">新竹縣</a>
+          <a class="dropdown-item" href="ilan.html">宜蘭縣</a>
+          <span>----------中部-----------</span>
+          <a class="dropdown-item" href="miaoli.html">苗栗縣</a>
+          <a class="dropdown-item" href="taichung.html">台中市</a>
+          <a class="dropdown-item" href="chunghwa.html">彰化縣</a>
+          <a class="dropdown-item" href="nantou.html">南投縣</a>
+          <a class="dropdown-item" href="yunlin.html">雲林縣</a>
+          <span>----------南部-----------</span>
+          <a class="dropdown-item" href="chiayi.html">嘉義縣</a>
+          <a class="dropdown-item" href="tainan.html">台南市</a>
+          <a class="dropdown-item" href="kaohsiung.html">高雄市</a>
+          <a class="dropdown-item" href="pingtung.html">屏東縣</a>
+          <a class="dropdown-item" href="penghu.html">澎湖縣</a>
+          <span>----------東部-----------</span>
+          <a class="dropdown-item" href="hualien.html">花蓮縣</a>
+          <a class="dropdown-item" href="taitung.html">台東縣</a>
+        </div>
       </div>
       <div class="row">
 
       </div>
-</div>
-<script>
-  fetch('<%- contents %>')
-.then(function (response) {
-  return response.json();
-})
+    </div>
+    <script>
+      fetch('<%- contents %>')
+        .then(function (response) {
+          return response.json();
+        })
 
-.then(function (weatherData) {
-  console.log(weatherData);
+        .then(function (weatherData) {
+          console.log(weatherData);
 
-  var Location = weatherData.records.locations[0].location
-  console.log(Location);
+          var Location = weatherData.records.locations[0].location
+          console.log(Location);
 
-  Location.forEach(element => {
-      var Name = element.locationName
-      var WX = element.weatherElement[6].time[0].elementValue[0].value
-      var POP = element.weatherElement[0].time[0].elementValue[0].value
-      var MinT = element.weatherElement[8].time[0].elementValue[0].value
-      var MaxT = element.weatherElement[12].time[0].elementValue[0].value
-      var UV = element.weatherElement[9].time[0].elementValue[0].value
-      var UVI = element.weatherElement[9].time[0].elementValue[1].value
+          Location.forEach(element => {
+            var Name = element.locationName
+            var WX = element.weatherElement[6].time[0].elementValue[0].value
+            var POP = element.weatherElement[0].time[0].elementValue[0].value
+            var MinT = element.weatherElement[8].time[0].elementValue[0].value
+            var MaxT = element.weatherElement[12].time[0].elementValue[0].value
+            var UV = element.weatherElement[9].time[0].elementValue[0].value
+            var UVI = element.weatherElement[9].time[0].elementValue[1].value
 
-      var img_src = "";
-      if (POP == 0) {
-          img_src = "https://image.flaticon.com/icons/svg/578/578153.svg"
-      } else if (POP < 25) {
-          img_src = "https://image.flaticon.com/icons/svg/578/578116.svg"
+            var img_src = "";
+            if (POP == 0) {
+              img_src = "https://image.flaticon.com/icons/svg/578/578153.svg"
+            } else if (POP < 25) {
+              img_src = "https://image.flaticon.com/icons/svg/578/578116.svg"
 
-      } else if (POP < 50) {
-          img_src = "https://image.flaticon.com/icons/svg/578/578118.svg"
-      } else {
-          img_src = "https://image.flaticon.com/icons/svg/578/578132.svg"
-      }
+            } else if (POP < 50) {
+              img_src = "https://image.flaticon.com/icons/svg/578/578118.svg"
+            } else {
+              img_src = "https://image.flaticon.com/icons/svg/578/578132.svg"
+            }
 
-      var Card = document.querySelector(".row")
-      Card.innerHTML += `
+            var Card = document.querySelector(".row")
+            Card.innerHTML += `
       <div class="card bg-fourth col-sm-3 col-md-2 mb-3">
           <img src="${img_src}" alt="氣象">
           <div>
@@ -97,18 +101,24 @@
           </div>
       </div>
       `
-  });
-});
+          });
+        });
 
-</script>
-        
+    </script>
+
   </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./assets/js/all.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./assets/js/all.js"></script>
 </body>
-</html>
 
+</html>
