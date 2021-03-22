@@ -72,7 +72,7 @@
       var UV = element.weatherElement[9].time[0].elementValue[0].value
       var UVI = element.weatherElement[9].time[0].elementValue[1].value
 
-      var img_src
+      var img_src = "";
       if (POP == 0) {
           img_src = "https://image.flaticon.com/icons/svg/578/578153.svg"
       } else if (POP < 25) {
@@ -87,7 +87,7 @@
       var Card = document.querySelector(".row")
       Card.innerHTML += `
       <div class="card bg-fourth col-sm-3 col-md-2 mb-3">
-          <img src="${img_src}" alt="">
+          <img src="${img_src}" alt="氣象">
           <div>
               <h3 class="font-weight-bold text-center">${Name}</h1>
               <p>天氣：${WX}</p>
